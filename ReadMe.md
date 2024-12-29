@@ -128,7 +128,7 @@ services:
     image: microservicepython1-traitement
     container_name: python1
     build:
-      context: ./MicroServiceTraitement-Calcul-Automatis-Racine-Poylynomes
+      context: ./MicroServiceTraitement1
       dockerfile: Dockerfile
     ports:
       - "5110:5110"
@@ -141,7 +141,7 @@ services:
     image: microservicepython2-traitement
     container_name: python2
     build:
-      context: ./MicroServiceTraitement2-Calcul-Automatis-Racine-Poylynomes
+      context: ./MicroServiceTraitement2
       dockerfile: Dockerfile
     ports:
       - "5001:5001"
@@ -154,7 +154,7 @@ services:
     image: microservicepython3-traitement
     container_name: python3
     build:
-      context: ./MicroServiceTraitement3-Calcul-Automatis-Racine-Poylynomes
+      context: ./MicroServiceTraitement3
       dockerfile: Dockerfile
     ports:
       - "5004:5004"
@@ -175,6 +175,7 @@ services:
       - app-network
     depends_on:
       - spring-app
+
 ```
 
 ----
